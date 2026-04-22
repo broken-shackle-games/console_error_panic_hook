@@ -94,7 +94,7 @@ cfg_if! {
             fn stack(error: &Error) -> String;
         }
 
-        fn hook_impl(info: &panic::PanicInfo) {
+        fn hook_impl(info: &panic::PanicHookInfo) {
             let mut msg = info.to_string();
 
             // Add the error stack to our message.
